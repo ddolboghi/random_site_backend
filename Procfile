@@ -1,1 +1,1 @@
-web: gunicorn random_site.wsgi --log-file -
+web: gunicorn main.wsgi --log-file -
