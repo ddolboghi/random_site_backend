@@ -84,7 +84,15 @@ import django_heroku
 import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.config()
+    # 'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'random_site',
+        'USER': 'jjy',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
 
 
