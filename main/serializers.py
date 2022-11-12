@@ -1,17 +1,21 @@
 from rest_framework import serializers
-from .models import Question, Answer
+from .models import Alldata, Result
 
-class QuestionSerializer(serializers.ModelSerializer):
+class AlldataSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Question
+        model = Alldata
         fields = (
             'id',
-            'content',
+            'is_choice',
+            'question',
+            'answer1',
+            'answer2',
+            'answer3',
         )
 
-class AnswerSerializer(serializers.ModelSerializer):
+class ResultSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Answer
+        model = Result
         fields = (
             'id',
             'content',

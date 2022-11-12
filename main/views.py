@@ -1,12 +1,14 @@
 from django.shortcuts import render
-from .models import Question, Answer
+from .models import Alldata, Result
 from rest_framework import generics
-from .serializers import QuestionSerializer, AnswerSerializer
+from .serializers import AlldataSerializer, ResultSerializer
 
-class DetailQuestion(generics.RetrieveUpdateDestroyAPIView):
-  queryset = Question.objects.all()
-  serializer_class = QuestionSerializer
+class DetailAlldata(generics.RetrieveUpdateDestroyAPIView):
+  queryset = Alldata.objects.all()
+  serializer_class = AlldataSerializer
 
-class DetailAnswer(generics.RetrieveUpdateDestroyAPIView):
-  queryset = Answer.objects.all()
-  serializer_class = AnswerSerializer
+class DetailResult(generics.RetrieveUpdateDestroyAPIView):
+  queryset = Result.objects.all()
+  serializer_class = ResultSerializer
+  
+  
