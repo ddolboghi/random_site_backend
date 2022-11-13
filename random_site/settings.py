@@ -80,7 +80,7 @@ WSGI_APPLICATION = "random_site.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-import django_heroku
+
 import dj_database_url
 
 DATABASES = {
@@ -139,5 +139,3 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ]
 }
-
-django_heroku.settings(locals())
